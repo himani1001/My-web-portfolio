@@ -1,0 +1,363 @@
+:root {
+    --primary-color: #FF71CD;
+    --secondary-color: #5755FE;
+    --bg-color: #F8F4EC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    transition-duration: 200ms;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding: 14px;
+}
+
+.darkerText {
+    color: var(--secondary-color);
+}
+
+header,
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+p {
+    font-size: 1.05em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+nav {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.projectHeader {
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectInfo {
+    font-size: 1rem;
+}
+
+nav a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+main,
+section,
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    gap: 64px;
+    /* padding-bottom: 64px; */
+}
+
+section {
+    gap: 48px;
+}
+
+.nameContainer {
+    gap: 8px;
+}
+
+.statsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.imgContainer { 
+    border-radius: 100%;
+    max-width: 114px;
+    overflow: hidden;
+}
+
+.imgContainer img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stats>div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stats div i {
+    font-size: 1.4em;
+}
+
+.stats div div {
+    display: grid;
+    place-items: center;
+    min-width: 40px;
+}
+
+.aboutMe {
+    line-height: 1.5em;
+}
+
+.outreach {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: auto;
+}
+
+.outreach:hover {
+    opacity: 0.7;
+}
+
+.outreach i {
+    transform: rotate(-45deg);
+}
+
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.headerText {
+    margin-bottom: 24px;
+}
+
+.projectItem {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.projectItem div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+}
+
+.projectItem>div:last-child {   
+    aspect-ratio: 16/9;
+    max-width: 30%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.projectItem>div:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.linkContainer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.linkItem {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 14px !important;
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkItem:hover {
+    opacity: 0.7;
+}
+
+.linkItem p {
+    font-size: 0.9em;
+}
+
+@media (min-width: 640px) {
+    .statsContainer {
+        flex-direction: row;
+    }
+
+    .stats {
+        gap: 0px;
+    }
+
+    .aboutMe {
+        width: 80%;
+        margin-right: auto;
+    }
+}
+
+/* styles.css */
+
+/* Container for skills sections */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: #5755FE; 
+}
+
+/* Skill card styles */
+.skill-card {
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background-color: #F8F4EC; /* Darker background for cards */
+}
+
+/* Skill title styles */
+.skill-title {
+    color: #5755FE; /* Violet color */
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Skills grid layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Skill item styles */
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Skill icon styles */
+.skill-icon {
+    color: #FF71CD; /* Violet color for icons */
+    font-size: 1.2rem;
+}
+
+/* Skill name styles */
+.skill-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Skill level styles */
+.skill-level {
+    font-size: 1rem;
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 1024px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: black;
+    border-top: 1px solid #7e22ce;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .footer {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .footer-container {
+        gap: 32px;
+    }
+}
+
+.footer__connect {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: white;
+    color: #475569;
+    font-weight: 500;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__label {
+    padding-right: 8px;
+}
+
+.footer__link {
+    color: #7c3aed;
+    text-decoration: none;
+}
+
+.footer__icon {
+    font-size: 0.75rem;
+    transform: scale(0.75);
+    padding-left: 0.125rem;
+}
+
+.fa-arrow-up-right-from-square {
+    font-size: 0.75rem;
+    transform: scale(0.75);
+}
